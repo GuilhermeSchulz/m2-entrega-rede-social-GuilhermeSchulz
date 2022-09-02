@@ -1,0 +1,11 @@
+body, header, img, div, button, label, form, input, p, section, h2, h1, span, textarea, ul, li{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+}
+
+
+

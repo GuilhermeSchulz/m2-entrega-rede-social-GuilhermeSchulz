@@ -1,0 +1,65 @@
+@media(min-width: 1024px){
+    .main__container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .main__container--div{
+        max-width: 50%;
+    }
+    .main__section--follow{
+        max-width: 40%;
+        height: 40%;
+        margin: 2rem auto;
+    }
+    .main__follow--list{
+        flex-direction: column;
+        -webkit-mask-image:none;
+        height: 70%;
+        padding: 1rem;
+    }
+    .main__follow--item{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+    .main__section--posts{
+        width: 50%;
+        margin: 0 1.55rem;
+        padding: 1rem;
+        overflow:hidden
+    }
+    .main__modal--div{
+        max-width: 50%;
+        height: max-content;
+        padding: 2rem;
+    }
+    .header__divBtn--button:hover{
+        border: 1px solid var(--grey-3);
+    }
+    .main__container--button:hover{
+        background-color: var(--primary-color);
+        color: var(--white);
+        transition: .5s;
+    }
+    .main__item--follow:hover{
+        border: 2px solid var(--primary-color);
+        background-color: var(--third-color);
+        color: var(--primary-color);
+    }
+    .main__post--button:hover{
+        background-color: var(--grey-1);
+    }
+
+    .post__like--btn:hover{
+        content: url("../img/heartRed.png");
+    }
+    .main__post--liked{
+        content: url("../img/heartRed.png")
+    }
+    .main__modal--button:hover{
+        color: var(--primary-color);
+    }
+    
+}
