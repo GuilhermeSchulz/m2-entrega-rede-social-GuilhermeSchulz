@@ -1,0 +1,50 @@
+.header__divBtn--button{
+    padding: 8px;
+    background-color: transparent;
+    color: var(--white);
+    border-radius: var(--border-radius-1);
+    border: 1px solid transparent;
+}
+
+.header__button--active{
+    padding: 8px;
+    color: var(--white);
+    background-color: var(--grey-3);
+    border: 1px solid transparent;
+    border-radius: var(--border-radius-1);
+}
+.main__form--button{
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 38px;
+    padding: .5rem;
+    border: none;
+    border-radius: var(--border-radius-1);
+    color: var(--white);
+}
+.main__container--btn{
+    background-color: var(--white);
+    width: 100%;
+    height: 38px;
+    padding: .5rem;
+    border: 1px solid var(--grey-1);
+    border-radius: var(--border-radius-1);
+    color: var(--grey-1);
+    font-size: var(--text-size-2);
+}
+.main__form--btnVoltar{
+    width: max-content;
+    padding: 0.3rem;
+    border: 1px solid var(--grey-1);
+    border-radius: var(--border-radius-1);
+    color: var(--grey-1);
+    background-color: var(--white);
+    font-size: var(--text-size-2);
+}
+.main__err--button{
+    width: 30%;
+    padding: 0.3rem;
+    border-radius: var(--border-radius-1);
+    border: none;
+    background-color: var(--white);
+}

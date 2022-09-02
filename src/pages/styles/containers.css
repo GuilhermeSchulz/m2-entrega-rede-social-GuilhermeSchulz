@@ -1,0 +1,123 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--white);
+}
+.header__menu{
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    background-color: var(--grey-2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    top: 0;
+    z-index: 1;
+}
+.main__container{
+    margin-top: 90px;
+    width: 100vw;
+    height: 100vh;
+}
+.main__container--div{
+    width: 90%;   
+    height: 40%;
+    padding-top: 1rem;
+    margin: 2rem auto;
+    
+}
+
+.main__div--profile{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    align-content: flex-start;
+}
+.main__container--form{
+    height: 265px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+.main__item--container{
+    display: flex;
+    height: 85%;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.main__section--posts{
+    width: 90%;
+    margin: 1rem auto;
+    overflow-y: auto;
+}
+.main__section--follow{
+    height: 25%;
+    width: 90%;
+    margin: 1rem auto;
+}
+.main__posts--list{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 2rem;
+
+}
+
+.main__follow--list{
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    justify-content: flex-start;
+    height: 75%;;
+    align-items: center;
+    gap: 2rem;
+    white-space: nowrap;
+    -webkit-mask-image: linear-gradient(to right, black 60%, transparent);
+}
+
+.main__follow--item{
+    display: flex;
+    width: 180px;
+    min-width: 180px;
+    height: 57px;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+
+
+.main__posts--item{
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 2rem;
+    width: 100%;
+}
+.main__posts--header{
+    width: 100%;
+    display: flex;
+    height: 50px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.main__post--footer{
+    display: flex;
+    gap:1rem
+}
+.main__post--container{
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+}

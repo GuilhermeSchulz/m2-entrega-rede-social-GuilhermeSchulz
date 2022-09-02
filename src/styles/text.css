@@ -1,0 +1,19 @@
+.main__container--text{
+    font-size: var(--text-size-3);
+    font-weight: var(--text-weight-1);
+
+}
+.main__err--title{
+    color: var(--white);
+    font-weight: var(--title-weight-2);
+    font-size: var(--text-size-1);
+    text-align: left;
+    width: 100%;
+}
+.main__err--text{
+    color: var(--white);
+    font-weight: var(--text-weight-1);
+    font-size: var(--text-size-2);
+    text-align: left;
+    width: 100%;
+}
