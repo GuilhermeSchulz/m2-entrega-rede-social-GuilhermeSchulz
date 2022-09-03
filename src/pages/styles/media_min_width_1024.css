@@ -6,8 +6,11 @@
     }
     .main__container--div{
         max-width: 50%;
+        margin: 0 1.55rem;
     }
     .main__section--follow{
+        position: fixed;
+        left: 57%;
         max-width: 40%;
         height: 40%;
         margin: 2rem auto;
