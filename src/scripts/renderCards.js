@@ -261,6 +261,7 @@ export class Render{
                 if(imgLikePostItem.alt == "Red Heart"){
                    imgLikePostItem.src = "../img/heartBlack.png"
                    imgLikePostItem.alt = "Black Heart"
+
                    let deleteLike = element.likes.filter((obj)=> {
                         if(obj.user.uuid == Render.userId){
                             return obj
@@ -268,6 +269,7 @@ export class Render{
                     })
                     
                     const dataId = deleteLike[0].uuid
+                    console.log(deleteLike)
                     Api.deletePost(dataId)
                     Api.listPosts()
                     spanPostItem.innerText = element.likes.length
@@ -276,10 +278,10 @@ export class Render{
                     const data = {
                         "post_uuid":element.uuid
                     }
-                    spanPostItem.innerText = element.likes.length
+
                     Api.likePosts(data)
                     Api.listPosts()
-                    spanPostItem.innerText = element.likes.length
+                    spanPostItem.innerText = element.likes.length+1
                     imgLikePostItem.alt = "Red Heart"
                     imgLikePostItem.src = "../img/heartRed.png"
 
