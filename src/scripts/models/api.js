@@ -43,7 +43,7 @@ export class Api {
     
     static async getUsers(){
         const getUser = await instanceWithToken
-        .get("users/?limit=10&offset=1/",)
+        .get(`users/?limit=10&offset=100&?page=${parseInt(Math.random() * 100)}/`,)
         .then(response => {
             console.log(response.data)
             Render.renderFollowList(response.data)
@@ -81,15 +81,16 @@ export class Api {
     }
     static async listPosts(){
         const listPosts = await instanceWithToken
-        .get("posts/?limit=10&offset=1/")
+        .get(`posts/?limit=10&offset=${Math.floor(Math.random() * 600) + 1}`)
         .then(response => {
             Render.renderPosts(response.data)
-
+            console.log(response)
         })
         .catch(error =>{
             Toast.create(error.message, "#D7443E")
             console.log(error)
         })
+        return listPosts
     }
 
     static async usersFollow(followingUserID){
