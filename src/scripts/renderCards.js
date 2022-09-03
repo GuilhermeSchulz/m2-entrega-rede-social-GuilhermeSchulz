@@ -149,8 +149,8 @@ export class Render{
     }
     static renderFollowList(list){
         const ulFollowList = document.querySelector(".main__follow--list")
-
-        list.results.forEach(element => {
+        let random = list.results.sort(() => .5 - Math.random()).slice(0,3)
+        random.forEach(element => {
             const liFollow = document.createElement("li")
             const divFollow = document.createElement("div")
             const imgFollow = document.createElement("img")
@@ -207,6 +207,7 @@ export class Render{
     }
     static renderPosts(list){
         const postsList = document.querySelector(".main__posts--list")
+        postsList.innerText = ""
         list.results.forEach(element => {
             const liPostItem = document.createElement("li")
             const divPostItem = document.createElement("div")
@@ -244,18 +245,20 @@ export class Render{
             contentPostItem.innerText = element.description
             openPostItem.innerText = "Abrir Post"
 
+           
             if(element.likes.some(element => {return element.user.uuid == Render.userId})  == true){
                 imgLikePostItem.src = "../img/heartRed.png"
                 imgLikePostItem.alt = "Red Heart"
+                
             }else{
                 imgLikePostItem.src = "../img/heartBlack.png"
                 imgLikePostItem.alt = "Black Heart"
+
             }
             
             btnLikePostItem.addEventListener("click", event => {
                 event.preventDefault()
                 if(imgLikePostItem.alt == "Red Heart"){
-                    console.log("oi")
                    imgLikePostItem.src = "../img/heartBlack.png"
                    imgLikePostItem.alt = "Black Heart"
                    let deleteLike = element.likes.filter((obj)=> {
@@ -263,18 +266,23 @@ export class Render{
                             return obj
                         }
                     })
-                    console.log(deleteLike)
+                    
                     const dataId = deleteLike[0].uuid
-                    console.log(dataId)
-                   Api.deletePost(dataId)
+                    Api.deletePost(dataId)
+                    Api.listPosts()
+                    spanPostItem.innerText = element.likes.length
                     
                 }else{
                     const data = {
                         "post_uuid":element.uuid
                     }
+                    spanPostItem.innerText = element.likes.length
                     Api.likePosts(data)
+                    Api.listPosts()
+                    spanPostItem.innerText = element.likes.length
                     imgLikePostItem.alt = "Red Heart"
                     imgLikePostItem.src = "../img/heartRed.png"
+
                     
                 }
             })
