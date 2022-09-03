@@ -7,6 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+  />
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/component.css">
     <link rel="stylesheet" href="./styles/animation.css">
@@ -14,8 +19,8 @@
     <link rel="stylesheet" href="./styles/containers.css">
     <link rel="stylesheet" href="./styles/form.css">
     <link rel="stylesheet" href="./styles/images.css">
-    <link rel="stylesheet" href="./styles/modal.css">
     <link rel="stylesheet" href="./styles/text.css">
+    <link rel="stylesheet" href="./styles/modal.css">
     <link rel="stylesheet" href="./styles/media_min_width_1024.css">
     <title>Dashboard - TechPosters</title>
 </head>
@@ -29,109 +34,30 @@
     <main class="main__container">
         <div class="main__container--div">
             <div class="main__div--profile">
-                <img class="main__div--img" src="../img/samuel.png" alt="profile picture">
-                <h2 class="main__div--name">Samuel Leão</h2>
-                <p class="main__div--job">Front end Engineer</p>
-                <span class="main__div--followers">565 seguidores</span>
             </div>
             <form class="main__container--form">
                 <input class="main__container--input" type="text" name="TituloForm" placeholder="Digitar titulo do post">
                 <textarea class="main__container--text" name="postForm" cols="30" rows="5" placeholder="Digitar descrição do post"></textarea>
-                <button class="main__container--button" type="submit">Postar</button>
+                <button class="main__container--button" name="btnPostForm" type="submit">Postar</button>
             </form>
         </div>
         <section class="main__section--follow">
             <h2 class="main__follow--title">Sugestões para você seguir</h2>
             <ul class="main__follow--list">
-                <li class="main__follow--item">
-                    <div class="main__item--container">
-                        <img class="main__item--img" src="../img/samuel.png" alt="profile picture">
-                        <h2 class="main__item--name">Samuel Leão</h2>
-                        <p class="main__item--job">Front end Engineer</p>
-                    </div>
-                    <button class="main__item--button">Seguindo</button>
-                </li>
-                <li class="main__follow--item">
-                    <div class="main__item--container">
-                        <img class="main__item--img" src="../img/samuel.png" alt="profile picture">
-                        <h2 class="main__item--name">Samuel Leão</h2>
-                        <p class="main__item--job">Front end Engineer</p>
-                    </div>
-                    <button class="main__item--button main__item--follow">Seguir</button>
-                </li>
-                <li class="main__follow--item">
-                    <div class="main__item--container">
-                        <img class="main__item--img" src="../img/samuel.png" alt="profile picture">
-                        <h2 class="main__item--name">Samuel Leão</h2>
-                        <p class="main__item--job">Front end Engineer</p>
-                    </div>
-                    <button class="main__item--button main__item--follow">Seguir</button>
-                </li>
-                <li class="main__follow--item">
-                    <div class="main__item--container">
-                        <img class="main__item--img" src="../img/samuel.png" alt="profile picture">
-                        <h2 class="main__item--name">Samuel Leão</h2>
-                        <p class="main__item--job">Front end Engineer</p>
-                    </div>
-                    <button class="main__item--button main__item--follow">Seguir</button>
-                </li>
             </ul>
         </section>
         <section class="main__section--posts">
             <ul class="main__posts--list">
                 <h2 class="main__posts--title">Posts</h2>
-                <li class="main__posts--item">
-                    <div class="main__posts--header">
-                        <img class="main__header--img" src="../img/samuel.png" alt="profile picture">
-                        <h2 class="main__header--name">Samuel Leão</h2>
-                        <p class="main__header--job">Front end Engineer</p>
-                    </div>
-                    <h1 class="main__posts--title">Como criar um interface simples e agradável utilizando boas práticas de design</h1>
-                    <p class="main__posts--content">Hoje vamos conversar sobre como criar uma interface agradável mesmo sem ter um design pronto feito por um profissional de UI design.
 
-                        Antes de iniciar a criação de qualquer projeto, busque referências de aplicações que tenham a ver com o nicho que você está desenvolvendo. Por exemplo, quando quero criar um e-commerce de roupas, vou reservar um momento para buscar por aplicações do gênero, tanto acessando ou baixando apps e vendo o que se repete de informações em cada um dos aplicativos e sites referentes a compra de roupas, e também, observar cores que normalmente você enxerga em cada um dos apps.</p>
-                    <div class="main__post--footer">
-                        <button class="main__post--button">Abrir post</button>
-                        <div class="main__post--container">
-                            <button class="main__post--like"><img class="post__like--btn" src="../img/heartBlack.png" alt="button like"></button>
-                            <span class="main__post--count">29</span>
-                        </div>
-                    </div>
-                </li>
-                <li class="main__posts--item">
-                    <div class="main__posts--header">
-                        <img class="main__header--img" src="../img/samuel.png" alt="profile picture">
-                        <h2 class="main__header--name">Samuel Leão</h2>
-                        <p class="main__header--job">Front end Engineer</p>
-                    </div>
-                    <h1 class="main__posts--title">Como criar um interface simples e agradável utilizando boas práticas de design</h1>
-                    <p class="main__posts--content">Hoje vamos conversar sobre como criar uma interface agradável mesmo sem ter um design pronto feito por um profissional de UI design.
-
-                        Antes de iniciar a criação de qualquer projeto, busque referências de aplicações que tenham a ver com o nicho que você está desenvolvendo. Por exemplo, quando quero criar um e-commerce de roupas, vou reservar um momento para buscar por aplicações do gênero, tanto acessando ou baixando apps e vendo o que se repete de informações em cada um dos aplicativos e sites referentes a compra de roupas, e também, observar cores que normalmente você enxerga em cada um dos apps.</p>
-                    <div class="main__post--footer">
-                        <button class="main__post--button">Abrir post</button>
-                        <button class="main__post--like"><img class="main__post--liked" src="../img/heartRed.png" alt="button like"></button>
-                        <span class="main__post--count">29</span>
-                    </div>
-                </li>
             </ul>
         </section>
-        <section class="main__modal hidden">
-            <div class="main__modal--div">
-                <div class="main__modal--header">
-                    <img class="main__modal--img" src="../img/samuel.png" alt="profile picture">
-                    <h2 class="main__modal--name">Samuel Leão</h2>
-                    <p class="main__modal--job">Front end Engineer</p>
-                </div>
-                <button type="submit" class="main__modal--button">x</button>
-                <div class="main__modal--post">
-                    <h2 class="main__modal--title">Como criar um interface simples e agradável utilizando boas práticas de design</h2>
-                    <p class="main__modal--content">Hoje vamos conversar sobre como criar uma interface agradável mesmo sem ter um design pronto feito por um profissional de UI design.
-                    </br>
-                    Antes de iniciar a criação de qualquer projeto, busque referências de aplicações que tenham a ver com o nicho que você está desenvolvendo. Por exemplo, quando quero criar um e-commerce de roupas, vou reservar um momento para buscar por aplicações do gênero, tanto acessando ou baixando apps e vendo o que se repete de informações em cada um dos aplicativos e sites referentes a compra de roupas, e também, observar cores que normalmente você enxerga em cada um dos apps.</p>
-                </div>
-            </div>
-        </section>
     </main>
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/toastify-js"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="module" src="../scripts/dashboard.js"></script> 
 </body>
 </html>
