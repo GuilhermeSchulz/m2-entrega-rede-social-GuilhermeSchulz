@@ -79,9 +79,11 @@ export class Api {
         })
         return createPost
     }
+
+    //${Math.floor(Math.random() * 600) + 1}
     static async listPosts(){
         const listPosts = await instanceWithToken
-        .get(`posts/?limit=10&offset=${Math.floor(Math.random() * 600) + 1}`)
+        .get(`posts/?limit=10&offset=700`)
         .then(response => {
             Render.renderPosts(response.data)
             console.log(response)
