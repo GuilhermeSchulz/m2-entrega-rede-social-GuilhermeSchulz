@@ -7,6 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <link rel="stylesheet" href="./src/styles/reset.css">
     <link rel="stylesheet" href="./src/styles/component.css">
     <link rel="stylesheet" href="./src/styles/buttons.css">
@@ -22,52 +27,17 @@
     <header class="header__menu">
         <img class="header__menu--logo" src="./src/img/TechPosters.png" alt="Logo TechPosters">
         <div class="header__menu__divBtn">
-            <button class="header__button--active">Login</button>
-            <button class="header__divBtn--button">Registro</button>
+            <button class="header__button--active" id="headerLogin">Login</button>
+            <button class="header__divBtn--button" id="headerSignup">Registro</button>
         </div>
     </header>
     <main class="main__container">
-        <section class="main__container--login">
-            <div class="main__div--form">
-                <form class="main__container--form">
-                    <label class="main__form--label">Login</label>
-                    <input class="main__form--input" type="text" name="email" placeholder="Seu e-mail">
-                    <input class="main__form--input" type="password" name="password" placeholder="Sua senha">
-                    <button class="main__form--button" type="submit">Logar</button>
-                    <div class="main__form--div">
-                        <p class="main__container--text">Ainda não possui cadastro?</p>
-                        <button class="main__container--btn">Ir para a página do registro</button>
-                    </div>
-                </form>
-            </div>
-        </section>
-        <section class="main__container--modal hidden">
-            <div class="main__div--form">
-                <form class="main__container--form">
-                    <div class="main__form--header">
-                        <label class="main__form--label">Cadastro</label>
-                        <button class="main__form--btnVoltar">Voltar</button>
-                    </div>
-                    <input class="main__form--input" type="text" name="nameSignup" required placeholder="Seu Nome">
-                    <input class="main__form--input" type="email" name="emailSignup" required placeholder="Seu e-mail">
-                    <input class="main__form--input" type="password" name="senhaSignup" required placeholder="Sua Senha">
-                    <input class="main__form--input" type="text" name="jobSignup" required placeholder="Qual o seu trabalho?">
-                    <input class="main__form--input" type="text" name="imgSignup" required placeholder="URL da imagem de perfil">
-                    <button class="main__form--button" type="submit">Registrar</button>
-                    <div class="main__form--div">
-                        <p class="main__container--text">Já possui login?</p>
-                        <button class="main__container--btn">Ir para página de login</button>
-                    </div>
-                </form>
-            </div>
-        </section>
-        <section class="main__container--err hidden">
-            <div class="main__err--div">
-                <h2 class="main__err--title">Acesso não autorizado</h2>
-                <p class="main__err--text">Essa conta não existe, logo não pode acessar a página dos posts</p>
-                <button class="main__err--button">Entendi</button>
-            </div>
-        </section>
     </main>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./src/scripts/index.js"></script> 
 </body>
 </html>

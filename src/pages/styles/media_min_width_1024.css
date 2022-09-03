@@ -12,6 +12,9 @@
         height: 40%;
         margin: 2rem auto;
     }
+    .main__item--container{
+        width: 39%;
+    }
     .main__follow--list{
         flex-direction: column;
         -webkit-mask-image:none;
@@ -53,10 +56,10 @@
     }
 
     .post__like--btn:hover{
-        content: url("../img/heartRed.png");
+        content: url("../../img/heartRed.png");
     }
     .main__post--liked{
-        content: url("../img/heartRed.png")
+        content: url("../../img/heartRed.png")
     }
     .main__modal--button:hover{
         color: var(--primary-color);
