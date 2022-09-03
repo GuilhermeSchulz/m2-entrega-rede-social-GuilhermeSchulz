@@ -1,0 +1,39 @@
+@media(min-width: 1024px){
+    .main__div--form{
+       transform: scale(1.1);
+       margin: 6rem auto;
+    }
+    .main__err--div{
+        top: 77%;
+        left: 58%;
+    }
+    .main__form--button:hover{
+        background-color: var(--secondary-color);
+    }
+
+    .main__container--btn:hover{
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        background-color: var(--third-color);
+    }
+    .header__divBtn--button:hover{
+        border: 1px solid var(--grey-3);
+    }
+    .header__button--active:hover{
+        background-color: var(--grey2);
+    }
+    .main__form--btnVoltar:hover{
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        background-color: var(--third-color);
+    }
+    .main__err--button:hover{
+        background-color: var(--third-color);
+    }
+}
+@media(min-width: 1440px){
+    .main__err--div{
+        top: 77%;
+        left: 70%;
+    }
+}

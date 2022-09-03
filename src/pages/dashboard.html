@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+  />
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/component.css">
+    <link rel="stylesheet" href="./styles/animation.css">
+    <link rel="stylesheet" href="./styles/buttons.css">
+    <link rel="stylesheet" href="./styles/containers.css">
+    <link rel="stylesheet" href="./styles/form.css">
+    <link rel="stylesheet" href="./styles/images.css">
+    <link rel="stylesheet" href="./styles/text.css">
+    <link rel="stylesheet" href="./styles/modal.css">
+    <link rel="stylesheet" href="./styles/media_min_width_1024.css">
+    <title>Dashboard - TechPosters</title>
+</head>
+<body>
+    <header class="header__menu">
+        <img class="header__menu--logo" src="../img/TechPosters.png" alt="Logo TechPosters">
+        <div class="header__menu__divBtn">
+            <button class="header__divBtn--button">Sair</button>
+        </div>
+    </header>
+    <main class="main__container">
+        <div class="main__container--div">
+            <div class="main__div--profile">
+            </div>
+            <form class="main__container--form">
+                <input class="main__container--input" type="text" name="TituloForm" placeholder="Digitar titulo do post">
+                <textarea class="main__container--text" name="postForm" cols="30" rows="5" placeholder="Digitar descrição do post"></textarea>
+                <button class="main__container--button" name="btnPostForm" type="submit">Postar</button>
+            </form>
+        </div>
+        <section class="main__section--follow">
+            <h2 class="main__follow--title">Sugestões para você seguir</h2>
+            <ul class="main__follow--list">
+            </ul>
+        </section>
+        <section class="main__section--posts">
+            <ul class="main__posts--list">
+                <h2 class="main__posts--title">Posts</h2>
+
+            </ul>
+        </section>
+    </main>
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/toastify-js"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="module" src="../scripts/dashboard.js"></script> 
+</body>
+</html>

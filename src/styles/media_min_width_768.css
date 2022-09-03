@@ -1,0 +1,15 @@
+
+@media(min-width: 768px){
+    .main__div--form{
+        max-width: 460px;
+    }
+    .main__err--div{
+        max-width: 400px;
+        top: 5%;
+        left: 24%;
+    }
+    .header__menu{
+        padding: 0 2rem;
+        justify-content: space-between;
+    }
+}

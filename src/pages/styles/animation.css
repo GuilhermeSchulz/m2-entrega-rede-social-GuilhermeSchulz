@@ -1,0 +1,9 @@
+
+.main__container--input:focus{
+    outline: none;
+    border: var(--border-size-1) solid var(--primary-color);
+}
+.main__container--text:focus{
+    outline: none;
+    border: var(--border-size-1) solid var(--primary-color);
+}
