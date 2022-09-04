@@ -205,9 +205,19 @@ export class Render{
         });
         return ulFollowList
     }
-    static renderPosts(list){
+    static renderPosts(list, page){
+        const pages = page
+        console.log(pages)
         const postsList = document.querySelector(".main__posts--list")
         postsList.innerText = ""
+        const paginaAnterior = document.querySelector(".btnAnterior")
+        const paginaProxima = document.querySelector(".btnProxima")
+        if(list.previous == null){
+            paginaAnterior.classList.add("hidden")}
+        if(list.next == null){
+            paginaProxima.classList.add("hidden")}
+
+
         list.results.forEach(element => {
             const liPostItem = document.createElement("li")
             const divPostItem = document.createElement("div")
@@ -271,7 +281,9 @@ export class Render{
                     const dataId = deleteLike[0].uuid
                     console.log(deleteLike)
                     Api.deletePost(dataId)
-                    Api.listPosts()
+                    Api.listPostsPages(page)
+
+
                     spanPostItem.innerText = element.likes.length
                     
                 }else{
@@ -280,8 +292,8 @@ export class Render{
                     }
 
                     Api.likePosts(data)
-                    Api.listPosts()
-                    spanPostItem.innerText = element.likes.length+1
+                    Api.listPostsPages(page)
+                    spanPostItem.innerText = element.likes.length
                     imgLikePostItem.alt = "Red Heart"
                     imgLikePostItem.src = "../img/heartRed.png"
 
@@ -307,6 +319,49 @@ export class Render{
 
         })
         
+    }
+    static btnPages(list){
+        const paginaInicial = document.querySelector(".btnInicial")
+        const paginaAnterior = document.querySelector(".btnAnterior")
+        const paginaProxima = document.querySelector(".btnProxima")
+        const paginaFinal = document.querySelector(".btnFinal")
+
+
+        const lastPage = list.count -10
+        
+        if(list.next == null){
+            paginaProxima.classList.add("hidden")
+        }else{
+            const nextPage = list.next.split("/")
+            paginaProxima.classList.remove("hidden")
+            paginaProxima.addEventListener("click", event => {
+                event.preventDefault()
+                Api.listPostsPages(nextPage[nextPage.length-1])
+            })
+        }
+        if(list.previous == null){
+            paginaAnterior.classList.add("hidden")
+        }else{
+            const previousPage = list.previous.split("/")
+            paginaAnterior.classList.remove("hidden")
+            paginaAnterior.addEventListener("click", event => {
+                event.preventDefault()
+                Api.listPostsPages(previousPage[previousPage.length-1])
+
+            })
+        }
+        paginaInicial.addEventListener("click", event => {
+            event.preventDefault()
+            Api.listPosts()
+        })
+        paginaFinal.addEventListener("click", event => {
+            event.preventDefault()
+            Api.listLastPages(lastPage)
+        })
+        // paginaFinal.addEventListener("click", event => {
+        //     event.preventDefault()
+
+        // })
     }
     static renderModalPost(obj){
         const main = document.querySelector(".main__container")
