@@ -1,4 +1,5 @@
 import { Api } from "./models/api.js"
+import { Render } from "./renderCards.js"
 
 let userId = localStorage.getItem("kenzie@social:id")
 Api.specificUser(userId)
@@ -36,4 +37,4 @@ btnPost.addEventListener("click", event =>{
 
     dashBoardFunctions.createPost()
 })
-
+Render.btnPages

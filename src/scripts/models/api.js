@@ -45,7 +45,7 @@ export class Api {
         const getUser = await instanceWithToken
         .get(`users/?limit=10&offset=100&?page=${parseInt(Math.random() * 100)}/`,)
         .then(response => {
-            console.log(response.data)
+           
             Render.renderFollowList(response.data)
 
 
@@ -60,7 +60,7 @@ export class Api {
         const getUser = await instanceWithToken
         .get(`users/${userID}/`)
         .then(response => {
-            console.log(response)
+
              Render.renderProfile(response.data)
         })
         .catch(error => {
@@ -72,7 +72,9 @@ export class Api {
     static async createPost(data){
         const createPost = await instanceWithToken
         .post(`posts/`, data)
-        .then(response => response)
+        .then(response => {response
+
+            Toast.create("Criado o post", "#4263EB")})
         .catch(error => {
             Toast.create(error.message, "#D7443E")
             console.log(error)
@@ -83,9 +85,36 @@ export class Api {
     //${Math.floor(Math.random() * 600) + 1}
     static async listPosts(){
         const listPosts = await instanceWithToken
-        .get(`posts/?limit=10&offset=700`)
+        .get(`posts/?limit=10&offset=0`)
+        .then(response => {
+            Render.renderPosts(response.data, "?limit=10&offset=0")
+            Render.btnPages(response.data)
+        })
+        .catch(error =>{
+            Toast.create(error.message, "#D7443E")
+            console.log(error)
+        })
+        return listPosts
+    }
+    static async listPostsPages(page){
+        const listPosts = await instanceWithToken
+        .get(`posts/${page}`)
+        .then(response => {
+            Render.renderPosts(response.data, page)
+            Render.btnPages(response.data)
+        })
+        .catch(error =>{
+            Toast.create(error.message, "#D7443E")
+            console.log(error)
+        })
+        return listPosts
+    }
+    static async listLastPages(lastPage){
+        const listPosts = await instanceWithToken
+        .get(`posts/?limit=10&offset=${lastPage}`)
         .then(response => {
             Render.renderPosts(response.data)
+            Render.btnPages(response.data)
             console.log(response)
         })
         .catch(error =>{
@@ -94,6 +123,7 @@ export class Api {
         })
         return listPosts
     }
+
 
     static async usersFollow(followingUserID){
         const followUser = await instanceWithToken
