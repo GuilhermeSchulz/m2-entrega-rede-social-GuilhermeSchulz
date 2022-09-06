@@ -2,6 +2,9 @@ import { Api } from "./models/api.js"
 import { Render } from "./renderCards.js"
 
 let userId = localStorage.getItem("kenzie@social:id")
+if(!localStorage.getItem("kenzie@social:token")){
+    window.location.replace("/index.html")
+}
 Api.specificUser(userId)
 Api.getUsers()
 Api.listPosts()
