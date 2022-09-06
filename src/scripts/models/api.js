@@ -26,12 +26,14 @@ export class Api {
         const login = await instance
         .post("users/login/", data)
         .then(response => {
+            console.log()
             localStorage.setItem("kenzie@social:token", response.data.token)
             localStorage.setItem("kenzie@social:id", response.data.user_uuid)
             Toast.create("Logado com sucesso!", "#4263EB")
-            setTimeout(() => {
-                window.location.replace("/src/pages/dashboard.html")
-            }, 2000)
+                setTimeout(() => {
+                    window.location.replace("/src/pages/dashboard.html")
+                }, 2000)
+
             console.log(response)
         })
         .catch(error =>{
